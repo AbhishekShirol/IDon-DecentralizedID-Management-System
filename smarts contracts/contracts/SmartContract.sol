@@ -42,8 +42,8 @@ contract SmartContract {
 
         addressVerifierMap["0x70997970C51812dc3A010C7d01b50e0d17dc79C8"] = "RTO";
         verifierAddressMap["RTO"] = "0x70997970C51812dc3A010C7d01b50e0d17dc79C8";
-        addressVerifierMap["0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"] = "MNNIT A";
-        verifierAddressMap["MNNIT A"] = "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC";
+        addressVerifierMap["0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"] = "PES";
+        verifierAddressMap["PES"] = "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC";
         addressVerifierMap["0x90F79bf6EB2c4f870365E785982E1f101E93b906"] = "UIDAI";
         verifierAddressMap["UIDAI"] = "0x90F79bf6EB2c4f870365E785982E1f101E93b906";
     }
