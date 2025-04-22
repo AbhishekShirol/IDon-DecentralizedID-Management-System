@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Third Party App</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #15171a, #343538);
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+        margin: 0;
+        color: #f9fafb;
+        min-height: 100vh;
+      }
+      
+      .navbar {
+        background: rgba(31, 41, 55, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 2rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #f9fafb;
+        text-decoration: none;
+      }
+      
+      .navbar-links {
+        display: flex;
+        gap: 2rem;
+      }
+      
+      .navbar-link {
+        color: #d1d5db;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 0.9rem;
+      }
+      
+      .navbar-link:hover {
+        color: #60a5fa;
+      }
+      
+      .navbar-link.active {
+        color: #60a5fa;
+        font-weight: 500;
+      }
+      
+      .user-button {
+        background: #60a5fa;
+        color: #1f2937;
+        border: none;
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .user-button:hover {
+        background: #3b82f6;
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+      }
+      
+      .content {
+        padding-top: 6rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      
+      .welcome-card {
+        background: rgba(37, 40, 43, 0.95);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .welcome-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .card-title {
+        color: #f9fafb;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .card-text {
+        color: #d1d5db;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-brand">Third Party App</a>
+        
+        <button class="user-button">Hello <%= name %></button>
+      </div>
+    </nav>
+    
+    <div class="content">
+      <div class="welcome-card">
+        <h2 class="card-title">Welcome to the Third Party App</h2>
+        <p class="card-text">
+          You have successfully authenticated using IDon. Your identity has been verified without sharing your personal documents.
+        </p>
+      </div>
+      
+      <div class="welcome-card">
+        <h2 class="card-title">Your Verified Information</h2>
+        <p class="card-text">
+          Name: <%= name %><br>
+          Age Verification: Confirmed over 18
+        </p>
+      </div>
+      
+      <div class="welcome-card">
+        <h2 class="card-title">Privacy First</h2>
+        <p class="card-text">
+          With IDon, you control what information is shared. We only received the specific attributes you approved, not your actual documents or personal data.
+        </p>
+      </div>
+    </div>
+</body>
+</html>

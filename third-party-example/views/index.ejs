@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Third Party App</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #15171a, #343538);
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #f9fafb;
+    }
+    
+    .login-container {
+      background: rgba(37, 40, 43, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      box-sizing: border-box;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .login-container:hover {
+      transform: translateY(-5px);
+    }
+    
+    h1 {
+      color: #f9fafb;
+      margin-bottom: 30px;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .login-input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #4b5563;
+      background: #282c32;
+      color: #f9fafb;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .login-input::placeholder {
+      color: #9ca3af;
+    }
+    
+    .login-input:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+      transform: scale(1.02);
+    }
+    
+    .login-button {
+      width: 100%;
+      padding: 12px;
+      background: #60a5fa;
+      color: #1f2937;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .login-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .login-button:hover::before {
+      left: 100%;
+    }
+    
+    .login-button:hover {
+      background: #3b82f6;
+      box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+    }
+    
+    .login-button:active {
+      transform: scale(0.98);
+    }
+    
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+    
+    .mx-2 {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    
+    .text-gray-400 {
+      color: #9ca3af;
+    }
+    
+    .text-gray-500 {
+      color: #6b7280;
+    }
+    
+    .text-blue-400 {
+      color: #60a5fa;
+    }
+    
+    .hover\:text-blue-400:hover {
+      color: #60a5fa;
+    }
+    
+    .auth-options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+    
+    .auth-button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      background: #1f2937;
+      color: #f9fafb;
+      border: 1px solid #4b5563;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .auth-button:hover {
+      background: #323842;
+      border-color: #60a5fa;
+    }
+    
+    #companyButton {
+      background: #1f2937;
+      color: #60a5fa;
+      border-color: #60a5fa;
+    }
+    
+    #companyButton:hover {
+      background: #283548;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Third Party App</h1>
+    
+    <form>
+      <input type="text" class="login-input" placeholder="Email" />
+      <input type="password" class="login-input" placeholder="Password" />
+      <input type="file" class="login-input" placeholder="Driver's License (To prove you're above 18)" />
+      
+      <button type="button" class="login-button">Sign Up</button>
+    </form>
+    
+    <div class="mt-6 text-gray-400">Or sign in with</div>
+    
+    <div class="auth-options">
+      <button id="companyButton" class="auth-button">IDon</button>
+      <button class="auth-button">Google</button>
+      <button class="auth-button">Github</button>
+    </div>
+    
+    <div class="mt-6">
+      <a href="#" class="text-gray-400 hover:text-blue-400">Forgot Password?</a>
+      <span class="mx-2 text-gray-500">|</span>
+      <a href="#" class="text-gray-400 hover:text-blue-400">Help</a>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('companyButton').addEventListener('click', function() {
+      window.location = 'http://localhost:3000/access?org=<%= address %>&name=1&isOver18=1&callback=<%= self_url %>/callback';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Third Party App</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #15171a, #343538);
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: #f9fafb;
+      }
+      
+      .error-container {
+        background: rgba(37, 40, 43, 0.95);
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .error-code {
+        font-size: 6rem;
+        font-weight: 700;
+        color: #60a5fa;
+        margin: 0;
+        line-height: 1;
+        text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+      }
+      
+      .error-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #f9fafb;
+        margin: 0.5rem 0 1.5rem;
+      }
+      
+      .error-message {
+        color: #d1d5db;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+      
+      .back-button {
+        background: #60a5fa;
+        color: #1f2937;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+      }
+      
+      .back-button:hover {
+        background: #3b82f6;
+        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+      }
+      
+      .gradient-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+        background: linear-gradient(45deg, #60a5fa, #3b82f6, #2563eb);
+      }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="gradient-bg"></div>
+        <h1 class="error-code">401</h1>
+        <h2 class="error-title">Access Denied</h2>
+        <p class="error-message">
+            You don't have access to this page. Age verification is required.
+        </p>
+        <a href="/" class="back-button">Back to Login</a>
+    </div>
+</body>
+</html>
