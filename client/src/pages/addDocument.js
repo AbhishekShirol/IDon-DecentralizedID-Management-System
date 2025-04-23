@@ -86,14 +86,14 @@ const handleSubmit = async (e) => {
 
 	const verifierMap = {
 		Select: [],
-		'College ID': ['MNNIT A', 'UIDAI'],
+		'College ID': ['PES'],
 		'Aadhar Card': ['UIDAI'],
 		'Pan Card': ['UIDAI'],
-		'Driving License': ['RTO', 'UIDAI'],
+		'Driving License': ['RTO'],
 		'Passport': ['UIDAI'],
-		'10th Mark sheet': ['MNNIT A', 'UIDAI'],
-		'12th Mark sheet': ['MNNIT A', 'UIDAI'],
-		'College Result Transcript': ['MNNIT A', 'UIDAI'],
+		'10th Mark sheet': ['PES'],
+		'12th Mark sheet': ['PES'],
+		'College Result Transcript': ['PES'],
 	}
 	const handleChange = (e) => {
 		setFormData((prev) => {
